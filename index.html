@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='style.css'>
+  <title>4each</title>
+</head>
+<body>
+  <main>
+    <h1 class="form_title">お問い合わせフォーム</h1>
+    <form action='mail_confirm.php' method="POST" class="main_container">
+      <div class="form_input">
+        <div class='form_label'>
+          <label for='name'>名前</label>
+        </div>
+        <input type='text' id='name' name="name">
+      </div>
+      <div class='form_input'>
+        <div class='form_label'>
+          <label for='mail'>メールアドレス</label>
+        </div>
+        <input type='mail' id='mail' name='mail'>
+      </div>
+      <div class='form_input'>
+        <div class="form_label">
+          <label for='age'>年齢</label>
+        </div>
+        <select name='age' id='age'>
+          <script>
+            for(let i = 18; i <= 65; i++) {
+              document.write(`<option value="${i}">${i}</option>`)
+            }
+          </script>
+        </select>
+      </div>
+      <div class='form_input'>
+        <div class='form_label'>
+          <label for='comments'>コメント</label>
+        </div>
+        <textarea name='comments' id='comments' cols='30' rows='10'></textarea>
+      </div>
+      <div class="form_submit">
+        <input type='submit' value="送信する">
+      </div>
+    </form>
+  </main>
+</body>
+</html>
